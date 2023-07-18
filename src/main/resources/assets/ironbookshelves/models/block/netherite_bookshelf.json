@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "ironbookshelves:block/netherite_bookshelf_top",
+    "side": "ironbookshelves:block/netherite_bookshelf_side"
+  }
+}

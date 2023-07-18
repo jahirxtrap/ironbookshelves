@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "ironbookshelves:block/gold_bookshelf_top",
+    "side": "ironbookshelves:block/gold_bookshelf_side"
+  }
+}
