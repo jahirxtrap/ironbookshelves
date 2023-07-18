@@ -1,0 +1,9 @@
+{
+  "block": "ironbookshelves:emerald_bookshelf",
+  "stats": {
+    "maxEterna": 30,
+    "eterna": 3,
+    "quanta": 2,
+    "arcana": 2
+  }
+}
