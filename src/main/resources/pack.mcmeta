@@ -1,6 +1,8 @@
 {
-    "pack": {
-        "description": "ironbookshelves mod resources",
-        "pack_format": 9
-    }
+  "pack": {
+    "description": {
+      "text": "ironbookshelves mod resources"
+    },
+    "pack_format": 13
+  }
 }
