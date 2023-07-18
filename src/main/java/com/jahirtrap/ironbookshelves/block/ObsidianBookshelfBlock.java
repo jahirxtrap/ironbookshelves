@@ -26,12 +26,11 @@ public class ObsidianBookshelfBlock extends Block {
     public ObsidianBookshelfBlock() {
         super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.STONE).strength(50f, 1200f).requiresCorrectToolForDrops().noOcclusion()
                 .isRedstoneConductor((bs, br, bp) -> false));
-        setRegistryName("obsidian_bookshelf");
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.OBSIDIAN_BOOKSHELF, renderType -> renderType == RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.OBSIDIAN_BOOKSHELF.get(), renderType -> renderType == RenderType.cutout());
     }
 
     @Override

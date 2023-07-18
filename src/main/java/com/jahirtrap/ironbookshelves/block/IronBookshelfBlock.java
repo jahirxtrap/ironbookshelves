@@ -25,12 +25,11 @@ public class IronBookshelfBlock extends Block {
     public IronBookshelfBlock() {
         super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops().noOcclusion()
                 .isRedstoneConductor((bs, br, bp) -> false));
-        setRegistryName("iron_bookshelf");
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.IRON_BOOKSHELF, renderType -> renderType == RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.IRON_BOOKSHELF.get(), renderType -> renderType == RenderType.cutout());
     }
 
     @Override

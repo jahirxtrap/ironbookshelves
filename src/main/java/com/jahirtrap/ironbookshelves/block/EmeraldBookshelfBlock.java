@@ -25,12 +25,11 @@ public class EmeraldBookshelfBlock extends Block {
     public EmeraldBookshelfBlock() {
         super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops().noOcclusion()
                 .isRedstoneConductor((bs, br, bp) -> false));
-        setRegistryName("emerald_bookshelf");
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.EMERALD_BOOKSHELF, renderType -> renderType == RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.EMERALD_BOOKSHELF.get(), renderType -> renderType == RenderType.cutout());
     }
 
     @Override

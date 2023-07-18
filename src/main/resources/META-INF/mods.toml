@@ -1,12 +1,12 @@
 modLoader = "javafml"
-loaderVersion = "[37,)"
+loaderVersion = "[40,)"
 license = "All Rights Reserved"
 
 [[mods]]
 modId = "ironbookshelves"
-version = "1.17.1-1.0.0-forge"
+version = "${file.jarVersion}"
 displayName = "Iron Bookshelves"
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/iron-bookshelves"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/iron-bookshelves"
 logoFile = "logo.png"
 authors = "jahirtrap"
 description = "Bookshelves with more enchantment power"
@@ -15,13 +15,13 @@ itemIcon = "ironbookshelves:diamond_bookshelf"
 [[dependencies.ironbookshelves]]
     modId = "forge"
     mandatory = true
-    versionRange = "[37,)"
+    versionRange = "[40,)"
     ordering = "NONE"
     side = "BOTH"
 
 [[dependencies.ironbookshelves]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.17.1,1.18)"
+    versionRange = "[1.18,1.19)"
     ordering = "NONE"
     side = "BOTH"

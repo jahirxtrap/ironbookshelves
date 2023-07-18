@@ -25,12 +25,11 @@ public class NetheriteBookshelfBlock extends Block {
     public NetheriteBookshelfBlock() {
         super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.NETHERITE_BLOCK).strength(50f, 1200f).requiresCorrectToolForDrops()
                 .noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
-        setRegistryName("netherite_bookshelf");
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.NETHERITE_BOOKSHELF, renderType -> renderType == RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.NETHERITE_BOOKSHELF.get(), renderType -> renderType == RenderType.cutout());
     }
 
     @Override

@@ -1,37 +1,28 @@
 package com.jahirtrap.ironbookshelves.init;
 
+import com.jahirtrap.ironbookshelves.IronbookshelvesMod;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
-import java.util.ArrayList;
-import java.util.List;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class IronbookshelvesModItems {
-    private static final List<Item> REGISTRY = new ArrayList<>();
-    public static final Item IRON_BOOKSHELF = register(IronbookshelvesModBlocks.IRON_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final Item GOLDEN_BOOKSHELF = register(IronbookshelvesModBlocks.GOLDEN_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final Item DIAMOND_BOOKSHELF = register(IronbookshelvesModBlocks.DIAMOND_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final Item EMERALD_BOOKSHELF = register(IronbookshelvesModBlocks.EMERALD_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final Item OBSIDIAN_BOOKSHELF = register(IronbookshelvesModBlocks.OBSIDIAN_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final Item NETHERITE_BOOKSHELF = register(IronbookshelvesModBlocks.NETHERITE_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, IronbookshelvesMod.MODID);
+    public static final RegistryObject<Item> IRON_BOOKSHELF = block(IronbookshelvesModBlocks.IRON_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Item> GOLDEN_BOOKSHELF = block(IronbookshelvesModBlocks.GOLDEN_BOOKSHELF, CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Item> DIAMOND_BOOKSHELF = block(IronbookshelvesModBlocks.DIAMOND_BOOKSHELF,
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Item> EMERALD_BOOKSHELF = block(IronbookshelvesModBlocks.EMERALD_BOOKSHELF,
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Item> OBSIDIAN_BOOKSHELF = block(IronbookshelvesModBlocks.OBSIDIAN_BOOKSHELF,
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Item> NETHERITE_BOOKSHELF = block(IronbookshelvesModBlocks.NETHERITE_BOOKSHELF,
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-    private static Item register(Item item) {
-        REGISTRY.add(item);
-        return item;
-    }
-
-    private static Item register(Block block, CreativeModeTab tab) {
-        return register(new BlockItem(block, new Item.Properties().tab(tab)).setRegistryName(block.getRegistryName()));
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(REGISTRY.toArray(new Item[0]));
+    private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
+        return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 }

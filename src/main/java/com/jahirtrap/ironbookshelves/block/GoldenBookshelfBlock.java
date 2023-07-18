@@ -25,12 +25,11 @@ public class GoldenBookshelfBlock extends Block {
     public GoldenBookshelfBlock() {
         super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(3f, 6f).requiresCorrectToolForDrops().noOcclusion()
                 .isRedstoneConductor((bs, br, bp) -> false));
-        setRegistryName("golden_bookshelf");
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.GOLDEN_BOOKSHELF, renderType -> renderType == RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(IronbookshelvesModBlocks.GOLDEN_BOOKSHELF.get(), renderType -> renderType == RenderType.cutout());
     }
 
     @Override
