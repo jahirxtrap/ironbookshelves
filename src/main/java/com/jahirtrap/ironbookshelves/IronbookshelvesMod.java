@@ -8,9 +8,8 @@ import net.minecraft.world.item.CreativeModeTab.TabVisibility;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkEvent;
@@ -38,11 +37,17 @@ public class IronbookshelvesMod {
 
         IronbookshelvesModBlocks.REGISTRY.register(bus);
         IronbookshelvesModItems.REGISTRY.register(bus);
+        bus.addListener(this::buildContents);
     }
 
-    @SubscribeEvent
-    public static void onCreativeModeTabBuildContents(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+    public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,
+                                             BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
+        PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
+        messageID++;
+    }
+
+    public void buildContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.getEntries().putAfter(new ItemStack(Items.BOOKSHELF), new ItemStack(IronbookshelvesModItems.IRON_BOOKSHELF.get()), TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(IronbookshelvesModItems.IRON_BOOKSHELF.get()), new ItemStack(IronbookshelvesModItems.GOLDEN_BOOKSHELF.get()), TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(IronbookshelvesModItems.GOLDEN_BOOKSHELF.get()), new ItemStack(IronbookshelvesModItems.DIAMOND_BOOKSHELF.get()), TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -50,11 +55,5 @@ public class IronbookshelvesMod {
             event.getEntries().putAfter(new ItemStack(IronbookshelvesModItems.EMERALD_BOOKSHELF.get()), new ItemStack(IronbookshelvesModItems.OBSIDIAN_BOOKSHELF.get()), TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(IronbookshelvesModItems.OBSIDIAN_BOOKSHELF.get()), new ItemStack(IronbookshelvesModItems.NETHERITE_BOOKSHELF.get()), TabVisibility.PARENT_AND_SEARCH_TABS);
         }
-    }
-
-    public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,
-                                             BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
-        PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
-        messageID++;
     }
 }

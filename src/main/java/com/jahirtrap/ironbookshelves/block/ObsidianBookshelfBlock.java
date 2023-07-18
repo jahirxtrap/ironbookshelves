@@ -10,17 +10,17 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootParams;
 
 import java.util.Collections;
 import java.util.List;
 
 public class ObsidianBookshelfBlock extends Block {
     public ObsidianBookshelfBlock() {
-        super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.STONE).strength(50f, 1200f).requiresCorrectToolForDrops().noOcclusion()
-                .isRedstoneConductor((bs, br, bp) -> false));
+        super(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).sound(SoundType.STONE).strength(50f, 1200f).requiresCorrectToolForDrops().noOcclusion()
+                .isRedstoneConductor((bs, br, bp) -> false).pushReaction(PushReaction.BLOCK));
     }
 
     @Override
@@ -34,11 +34,6 @@ public class ObsidianBookshelfBlock extends Block {
     }
 
     @Override
-    public PushReaction getPistonPushReaction(BlockState state) {
-        return PushReaction.BLOCK;
-    }
-
-    @Override
     public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
         if (player.getInventory().getSelected().getItem() instanceof TieredItem tieredItem)
             return tieredItem.getTier().getLevel() >= 3;
@@ -46,7 +41,7 @@ public class ObsidianBookshelfBlock extends Block {
     }
 
     @Override
-    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+    public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
         List<ItemStack> dropsOriginal = super.getDrops(state, builder);
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
