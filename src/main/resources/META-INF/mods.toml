@@ -1,10 +1,10 @@
 modLoader = "javafml"
-loaderVersion = "[36,)"
+loaderVersion = "[37,)"
 license = "All Rights Reserved"
 
 [[mods]]
 modId = "ironbookshelves"
-version = "1.16.5-1.0.0-forge"
+version = "1.17.1-1.0.0-forge"
 displayName = "Iron Bookshelves"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/iron-bookshelves"
 logoFile = "logo.png"
@@ -15,13 +15,13 @@ itemIcon = "ironbookshelves:diamond_bookshelf"
 [[dependencies.ironbookshelves]]
     modId = "forge"
     mandatory = true
-    versionRange = "[36,)"
+    versionRange = "[37,)"
     ordering = "NONE"
     side = "BOTH"
 
 [[dependencies.ironbookshelves]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.16.5,1.17)"
+    versionRange = "[1.17.1,1.18)"
     ordering = "NONE"
     side = "BOTH"
