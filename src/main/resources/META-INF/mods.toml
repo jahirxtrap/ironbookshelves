@@ -4,7 +4,7 @@ license = "All Rights Reserved"
 
 [[mods]]
 modId = "ironbookshelves"
-version = "1.17.1-1.0.0-forge"
+version = "1.17.1-1.1.0-forge"
 displayName = "Iron Bookshelves"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/iron-bookshelves"
 logoFile = "logo.png"
