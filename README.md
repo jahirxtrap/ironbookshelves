@@ -12,8 +12,12 @@ Bookshelves with more enchantment power
 - Obsidian Bookshelf (Enchanting power: 7)
 - Netherite Bookshelf (Enchanting power: 10)
 
-<strong>Compatible with:</strong>
+<strong>Forge compatible with:</strong>
 
 - <a href="https://www.curseforge.com/minecraft/mc-mods/apotheosis" target="_blank">Apotheosis mod</a>
+
+<strong>Fabric/Quilt compatible with:</strong>
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/zenith" target="_blank">Zenith mod</a>
 
 <img src="https://cdn.modrinth.com/data/QmCOBeSP/images/b93b96310b7cfa71b17cd0bc799d6d5f3b001e68.png">
