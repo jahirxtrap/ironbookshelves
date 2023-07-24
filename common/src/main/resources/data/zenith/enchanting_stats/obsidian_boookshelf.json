@@ -1,0 +1,9 @@
+{
+  "block": "ironbookshelves:obsidian_bookshelf",
+  "stats": {
+    "maxEterna": 35,
+    "eterna": 3.5,
+    "quanta": 2.5,
+    "arcana": 2.5
+  }
+}

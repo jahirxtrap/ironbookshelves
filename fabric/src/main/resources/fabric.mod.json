@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "${mod_id}",
+	"version": "${mod_version}",
+	"name": "${mod_name}",
+	"description": "${mod_description}",
+	"authors": [
+		"${mod_author}"
+	],
+	"contact": {
+		"homepage": "${mod_url}"
+	},
+	"license": "${mod_license}",
+	"icon": "logo.png",
+	"environment": "${side}",
+	"entrypoints": {
+		"main": [
+			"com.jahirtrap.ironbookshelves.IronbookshelvesMod"
+		]
+	},
+	"mixins": [
+		"${mod_id}.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "${loader_version_range}",
+		"minecraft": "${minecraft_version_range}",
+		"java": ">=17",
+		"fabric": "*"
+	},
+	"jars": [{
+      		"file": "META-INF/jars/mixinextras-fabric-0.2.0-beta.9.jar"
+    	}]
+}
