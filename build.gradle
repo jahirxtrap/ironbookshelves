@@ -13,7 +13,7 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.17.1-1.1.0-forge'
+version = '1.17.1-1.1.1-forge'
 group = 'com.jahirtrap.ironbookshelves'
 archivesBaseName = 'ironbookshelves'
 
