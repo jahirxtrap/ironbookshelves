@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#B#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:gold_ingots"
+    },
+    "B": {
+      "item": "ironbookshelves:iron_bookshelf"
+    }
+  },
+  "result": {
+    "item": "ironbookshelves:golden_bookshelf",
+    "count": 1
+  }
+}
