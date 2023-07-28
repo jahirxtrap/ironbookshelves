@@ -98,7 +98,7 @@ processResources {
     filesMatching(resourceTargets) {
         expand replaceProperties
     }
-    exclude '**/data/zenith/**'
+    exclude '**/data/zenith/**', '**/data/c/**'
     from project(":common").sourceSets.main.resources
 }
 

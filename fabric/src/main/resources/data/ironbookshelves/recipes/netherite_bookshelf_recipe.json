@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "tag": "c:netherite_ingots"
+    },
+    "B": {
+      "item": "ironbookshelves:obsidian_bookshelf"
+    }
+  },
+  "result": {
+    "item": "ironbookshelves:netherite_bookshelf",
+    "count": 1
+  }
+}
