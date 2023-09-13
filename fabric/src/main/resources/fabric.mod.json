@@ -27,7 +27,8 @@
 		"java": ">=17",
 		"fabric": "*"
 	},
-	"jars": [{
-      		"file": "META-INF/jars/mixinextras-fabric-0.2.0-beta.9.jar"
-    	}]
+	"jars": [
+      		{"file": "META-INF/jars/mixinextras-fabric-0.2.0-rc.2.jar"},
+		{"file": "META-INF/jars/midnightlib-fabric-1.4.1.jar"}
+    	]
 }

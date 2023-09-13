@@ -1,0 +1,9 @@
+{
+  "block": "ironbookshelves:copper_bookshelf",
+  "stats": {
+    "maxEterna": 15,
+    "eterna": 1.25,
+    "quanta": 0.25,
+    "arcana": 0.25
+  }
+}

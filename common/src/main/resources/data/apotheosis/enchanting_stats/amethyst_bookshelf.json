@@ -1,0 +1,9 @@
+{
+  "block": "ironbookshelves:amethyst_bookshelf",
+  "stats": {
+    "maxEterna": 20,
+    "eterna": 1.75,
+    "quanta": 0.75,
+    "arcana": 0.75
+  }
+}

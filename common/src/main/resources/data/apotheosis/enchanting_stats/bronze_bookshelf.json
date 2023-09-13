@@ -1,0 +1,9 @@
+{
+  "block": "ironbookshelves:bronze_bookshelf",
+  "stats": {
+    "maxEterna": 25,
+    "eterna": 2.25,
+    "quanta": 1.25,
+    "arcana": 1.25
+  }
+}
