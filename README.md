@@ -5,19 +5,32 @@ Bookshelves with more enchantment power
 
 <strong>This mod adds:</strong>
 
-- Iron Bookshelf (Enchanting power: 2)
-- Golden Bookshelf (Enchanting power: 3)
-- Diamond Bookshelf (Enchanting power: 5)
-- Emerald Bookshelf (Enchanting power: 6)
-- Obsidian Bookshelf (Enchanting power: 7)
-- Netherite Bookshelf (Enchanting power: 10)
+- Iron Bookshelf (Enchantment power => 2)
+- Golden Bookshelf (Enchantment power => 3)
+- Diamond Bookshelf (Enchantment power => 5)
+- Emerald Bookshelf (Enchantment power => 6)
+- Obsidian Bookshelf (Enchantment power => 7)
+- Netherite Bookshelf (Enchantment power => 10)
+- Copper Bookshelf (Enchantment power => 1.5)
+- Amethyst Bookshelf (Enchantment power => 2.5)
+- Crying Obsidian Bookshelf (Enchantment power => 8)
+- Enderite Bookshelf (Enchantment power => 12)
+- Steel Bookshelf (Enchantment power => 3)
+- Bronze Bookshelf (Enchantment power => 4)
+- Configurable values
 
-<strong>Forge compatible with:</strong>
+<strong>Compatible with:</strong>
 
-- <a href="https://www.curseforge.com/minecraft/mc-mods/apotheosis" target="_blank">Apotheosis mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/apotheosis" target="_blank">Apotheosis mod</a> / <a href="https://www.curseforge.com/minecraft/mc-mods/zenith" target="_blank">Zenith mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-forge" target="_blank">Enderite mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
 
-<strong>Fabric/Quilt compatible with:</strong>
+<strong>Forge dependencies:</strong>
 
-- <a href="https://www.curseforge.com/minecraft/mc-mods/zenith" target="_blank">Zenith mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/configured" target="_blank">Configured mod</a> or <a href="https://www.curseforge.com/minecraft/mc-mods/config-menus-forge" target="_blank">Forge Config Screens mod</a> <strong>(Optional)</strong>
 
-<img src="https://cdn.modrinth.com/data/QmCOBeSP/images/b93b96310b7cfa71b17cd0bc799d6d5f3b001e68.png">
+<strong>Fabric/Quilt dependencies:</strong>
+
+- <a href="https://modrinth.com/mod/modmenu" target="_blank">Mod Menu mod</a> <strong>(Optional)</strong>
+
+<img src="https://cdn.modrinth.com/data/QmCOBeSP/images/3769a0a21896287116f97a77a769cf23a313f1cb.png">
