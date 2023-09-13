@@ -31,6 +31,7 @@ dependencies {
 
     modImplementation(implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:0.2.0-beta.9")))
     modImplementation "maven.modrinth:midnightlib:${midnightlib_version}"
+    modImplementation "maven.modrinth:jade:5.100.0"
 }
 
 loom {

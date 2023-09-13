@@ -3,6 +3,7 @@ package com.jahirtrap.ironbookshelves.init;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public class IronbookshelvesModConfig {
+    public static final ForgeConfigSpec.BooleanValue ENABLE_TOOLTIPS;
     public static final ForgeConfigSpec.DoubleValue IRON_ENCHANT_POWER;
     public static final ForgeConfigSpec.DoubleValue GOLDEN_ENCHANT_POWER;
     public static final ForgeConfigSpec.DoubleValue DIAMOND_ENCHANT_POWER;
@@ -19,6 +20,7 @@ public class IronbookshelvesModConfig {
 
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+        ENABLE_TOOLTIPS = COMMON_BUILDER.define("enableTooltips", true);
         IRON_ENCHANT_POWER = COMMON_BUILDER.defineInRange("ironEnchantPower", 2.0, 0.0, Double.POSITIVE_INFINITY);
         GOLDEN_ENCHANT_POWER = COMMON_BUILDER.defineInRange("goldenEnchantPower", 3.0, 0.0, Double.POSITIVE_INFINITY);
         DIAMOND_ENCHANT_POWER = COMMON_BUILDER.defineInRange("diamondEnchantPower", 5.0, 0.0, Double.POSITIVE_INFINITY);
