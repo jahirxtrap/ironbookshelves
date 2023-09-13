@@ -24,17 +24,12 @@ public class BaseBookshelfBlock extends Block implements EnchantmentBonusBlock, 
     int harvestLevel;
     PushReaction reaction;
 
-    public BaseBookshelfBlock(SoundType soundType, float hardness, float resistance, float enchantPower, int canHarvestLevel, PushReaction pushReaction) {
+    public BaseBookshelfBlock(SoundType soundType, float hardness, float resistance, double enchantPower, int canHarvestLevel, int lightLevel, PushReaction pushReaction) {
         super(BlockBehaviour.Properties.of(Material.METAL).sound(soundType).strength(hardness, resistance).requiresCorrectToolForDrops().noOcclusion()
-                .isRedstoneConductor((bs, br, bp) -> false));
-        power = enchantPower;
+                .isRedstoneConductor((bs, br, bp) -> false).lightLevel($ -> lightLevel));
+        power = (float) enchantPower;
         harvestLevel = canHarvestLevel;
         reaction = pushReaction;
-    }
-
-    @Override
-    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-        return 15;
     }
 
     @Override

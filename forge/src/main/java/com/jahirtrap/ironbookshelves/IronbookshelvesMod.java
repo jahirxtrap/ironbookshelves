@@ -1,9 +1,12 @@
 package com.jahirtrap.ironbookshelves;
 
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
+import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(IronbookshelvesMod.MODID)
@@ -14,6 +17,8 @@ public class IronbookshelvesMod {
 
     public IronbookshelvesMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, IronbookshelvesModConfig.COMMON_CONFIG);
 
         IronbookshelvesModBlocks.REGISTRY.register(bus);
         IronbookshelvesModItems.REGISTRY.register(bus);
