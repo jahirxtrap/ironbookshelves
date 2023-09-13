@@ -5,6 +5,10 @@
   "mixins": [
     "EnchantmentMenuMixin",
     "EnchantmentTableBlockMixin",
+    "JadeCompatMixin",
+    "PuzzlesLibCompatMixin",
+    "EasyMagicCompatMixin",
+    "EnchantingInfuserCompatMixin",
     "ServerPlayerGameModeMixin"
   ],
   "injectors": {

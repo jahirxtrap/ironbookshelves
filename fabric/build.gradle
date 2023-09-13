@@ -31,6 +31,10 @@ dependencies {
 
     modImplementation(implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:0.2.0-beta.9")))
     modImplementation "maven.modrinth:midnightlib:${midnightlib_version}-fabric"
+    modImplementation "maven.modrinth:puzzles-lib:v6.0.11-1.19.4-Fabric"
+    modImplementation "maven.modrinth:easy-magic:v6.0.0-1.19.4-Fabric"
+    modImplementation "maven.modrinth:enchanting-infuser:v6.0.0-1.19.4-Fabric"
+    modImplementation "maven.modrinth:jade:10.4.0"
 }
 
 loom {
