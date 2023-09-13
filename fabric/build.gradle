@@ -15,6 +15,10 @@ repositories {
     maven {
         url = "https://jitpack.io/"
     }
+    maven {
+        name "modrinth"
+        url "https://api.modrinth.com/maven"
+    }
 }
 
 dependencies {
@@ -26,6 +30,7 @@ dependencies {
     implementation project(":common")
 
     modImplementation(implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:0.2.0-beta.9")))
+    modImplementation "maven.modrinth:midnightlib:${midnightlib_version}-fabric"
 }
 
 loom {
@@ -67,7 +72,8 @@ def replaceProperties = [
         loader_version_range: fabric_loader_version_range,
         mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: version,
         mod_author: mod_author, mod_description: mod_description,
-        mod_url: mod_url, side: fabric_side
+        mod_url: mod_url, side: fabric_side,
+        midnightlib_version: midnightlib_version
 ]
 
 processResources {

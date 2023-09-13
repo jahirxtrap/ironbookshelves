@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "enderitemod:enderite_ingot"
+    },
+    "B": {
+      "item": "ironbookshelves:netherite_bookshelf"
+    }
+  },
+  "result": {
+    "item": "ironbookshelves:enderite_bookshelf",
+    "count": 1
+  }
+}
