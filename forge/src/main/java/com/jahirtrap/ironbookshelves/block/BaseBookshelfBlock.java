@@ -1,9 +1,13 @@
 package com.jahirtrap.ironbookshelves.block;
 
+import com.jahirtrap.ironbookshelves.util.TextUtils;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -13,9 +17,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.storage.loot.LootContext;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
 import java.util.List;
+
+import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.ENABLE_TOOLTIPS;
 
 public class BaseBookshelfBlock extends Block {
     float power;
@@ -33,6 +40,13 @@ public class BaseBookshelfBlock extends Block {
     @Override
     public float getEnchantPowerBonus(BlockState state, LevelReader world, BlockPos pos) {
         return power;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag flag) {
+        if (ENABLE_TOOLTIPS.get()) {
+            tooltip.add(TextUtils.coloredTextComponent("Ench Power: " + TextUtils.formatText(power), ChatFormatting.GRAY));
+        }
     }
 
     @Override
