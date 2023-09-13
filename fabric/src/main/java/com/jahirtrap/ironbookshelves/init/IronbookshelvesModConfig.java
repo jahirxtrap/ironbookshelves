@@ -3,6 +3,8 @@ package com.jahirtrap.ironbookshelves.init;
 import eu.midnightdust.lib.config.MidnightConfig;
 
 public class IronbookshelvesModConfig extends MidnightConfig {
+    @Entry(name = "Enable Tooltips")
+    public static boolean enableTooltips = true;
     @Entry(name = "Iron Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
     public static double ironEnchantPower = 2.0;
     @Entry(name = "Golden Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
