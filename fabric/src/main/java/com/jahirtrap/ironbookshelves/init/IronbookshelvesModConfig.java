@@ -1,8 +1,8 @@
 package com.jahirtrap.ironbookshelves.init;
 
-import eu.midnightdust.lib.config.MidnightConfig;
+import com.jahirtrap.configlib.TXFConfig;
 
-public class IronbookshelvesModConfig extends MidnightConfig {
+public class IronbookshelvesModConfig extends TXFConfig {
     @Entry(name = "Enable Tooltips")
     public static boolean enableTooltips = true;
     @Entry(name = "Iron Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
