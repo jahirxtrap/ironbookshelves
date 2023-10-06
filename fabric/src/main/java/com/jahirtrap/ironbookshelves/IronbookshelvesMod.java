@@ -1,8 +1,8 @@
 package com.jahirtrap.ironbookshelves;
 
+import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
-import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -15,7 +15,7 @@ public class IronbookshelvesMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        MidnightConfig.init(MODID, IronbookshelvesModConfig.class);
+        TXFConfig.init(MODID, IronbookshelvesModConfig.class);
         IronbookshelvesModBlocks.init();
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
             event.addAfter(new ItemStack(Items.BOOKSHELF), IronbookshelvesModBlocks.IRON_BOOKSHELF);
