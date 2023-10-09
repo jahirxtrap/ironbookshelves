@@ -46,7 +46,7 @@ public class BaseBookshelfBlock extends Block implements EnchantmentBonusBlock, 
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag flag) {
-        if (enableTooltips) {
+        if (enableTooltips && power != 0) {
             tooltip.add(TextUtils.coloredTextComponent("Ench Power: " + TextUtils.formatText(power), ChatFormatting.GRAY));
         }
     }
