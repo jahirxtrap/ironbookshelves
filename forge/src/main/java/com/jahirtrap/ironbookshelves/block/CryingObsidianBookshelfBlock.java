@@ -9,11 +9,11 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.PushReaction;
 
-import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.CRYING_OBSIDIAN_ENCHANT_POWER;
+import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.cryingObsidianEnchantPower;
 
 public class CryingObsidianBookshelfBlock extends BaseBookshelfBlock {
     public CryingObsidianBookshelfBlock() {
-        super(SoundType.STONE, 50f, 1200f, CRYING_OBSIDIAN_ENCHANT_POWER.get(), 3, 10, PushReaction.BLOCK);
+        super(SoundType.STONE, 50f, 1200f, cryingObsidianEnchantPower, 3, 10, PushReaction.BLOCK);
     }
 
     @Override
