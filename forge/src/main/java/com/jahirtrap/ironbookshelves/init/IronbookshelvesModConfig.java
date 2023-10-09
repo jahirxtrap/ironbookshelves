@@ -1,39 +1,32 @@
 package com.jahirtrap.ironbookshelves.init;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 
-public class IronbookshelvesModConfig {
-    public static final ForgeConfigSpec.BooleanValue ENABLE_TOOLTIPS;
-    public static final ForgeConfigSpec.DoubleValue IRON_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue GOLDEN_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue DIAMOND_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue EMERALD_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue OBSIDIAN_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue NETHERITE_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue COPPER_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue AMETHYST_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue CRYING_OBSIDIAN_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue ENDERITE_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue STEEL_ENCHANT_POWER;
-    public static final ForgeConfigSpec.DoubleValue BRONZE_ENCHANT_POWER;
-    public static ForgeConfigSpec COMMON_CONFIG;
-
-    static {
-        ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
-        ENABLE_TOOLTIPS = COMMON_BUILDER.define("enableTooltips", true);
-        IRON_ENCHANT_POWER = COMMON_BUILDER.defineInRange("ironEnchantPower", 2.0, 0.0, Double.POSITIVE_INFINITY);
-        GOLDEN_ENCHANT_POWER = COMMON_BUILDER.defineInRange("goldenEnchantPower", 3.0, 0.0, Double.POSITIVE_INFINITY);
-        DIAMOND_ENCHANT_POWER = COMMON_BUILDER.defineInRange("diamondEnchantPower", 5.0, 0.0, Double.POSITIVE_INFINITY);
-        EMERALD_ENCHANT_POWER = COMMON_BUILDER.defineInRange("emeraldEnchantPower", 6.0, 0.0, Double.POSITIVE_INFINITY);
-        OBSIDIAN_ENCHANT_POWER = COMMON_BUILDER.defineInRange("obsidianEnchantPower", 7.0, 0.0, Double.POSITIVE_INFINITY);
-        NETHERITE_ENCHANT_POWER = COMMON_BUILDER.defineInRange("netheriteEnchantPower", 10.0, 0.0, Double.POSITIVE_INFINITY);
-        COPPER_ENCHANT_POWER = COMMON_BUILDER.defineInRange("copperEnchantPower", 1.5, 0.0, Double.POSITIVE_INFINITY);
-        AMETHYST_ENCHANT_POWER = COMMON_BUILDER.defineInRange("amethystEnchantPower", 2.5, 0.0, Double.POSITIVE_INFINITY);
-        CRYING_OBSIDIAN_ENCHANT_POWER = COMMON_BUILDER.defineInRange("cryingObsidianEnchantPower", 8.0, 0.0, Double.POSITIVE_INFINITY);
-        ENDERITE_ENCHANT_POWER = COMMON_BUILDER.defineInRange("enderiteEnchantPower", 12.0, 0.0, Double.POSITIVE_INFINITY);
-        STEEL_ENCHANT_POWER = COMMON_BUILDER.defineInRange("steelEnchantPower", 3.0, 0.0, Double.POSITIVE_INFINITY);
-        BRONZE_ENCHANT_POWER = COMMON_BUILDER.defineInRange("bronzeEnchantPower", 4.0, 0.0, Double.POSITIVE_INFINITY);
-
-        COMMON_CONFIG = COMMON_BUILDER.build();
-    }
+public class IronbookshelvesModConfig extends TXFConfig {
+    @Entry(name = "Enable Tooltips")
+    public static boolean enableTooltips = true;
+    @Entry(name = "Iron Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double ironEnchantPower = 2.0;
+    @Entry(name = "Golden Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double goldenEnchantPower = 3.0;
+    @Entry(name = "Diamond Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double diamondEnchantPower = 5.0;
+    @Entry(name = "Emerald Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double emeraldEnchantPower = 6.0;
+    @Entry(name = "Obsidian Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double obsidianEnchantPower = 7.0;
+    @Entry(name = "Netherite Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double netheriteEnchantPower = 10.0;
+    @Entry(name = "Copper Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double copperEnchantPower = 1.5;
+    @Entry(name = "Amethyst Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double amethystEnchantPower = 2.5;
+    @Entry(name = "Crying Obsidian Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double cryingObsidianEnchantPower = 8.0;
+    @Entry(name = "Enderite Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double enderiteEnchantPower = 12.0;
+    @Entry(name = "Steel Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double steelEnchantPower = 3.0;
+    @Entry(name = "Bronze Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY)
+    public static double bronzeEnchantPower = 4.0;
 }
