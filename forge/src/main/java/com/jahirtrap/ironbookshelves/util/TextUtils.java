@@ -14,7 +14,7 @@ public class TextUtils {
         if (amount % 1.0 == 0) {
             return String.format("%.0f", amount);
         } else {
-            return String.format("%.1f", amount);
+            return String.valueOf(amount);
         }
     }
 }

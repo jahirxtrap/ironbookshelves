@@ -3,16 +3,17 @@ package com.jahirtrap.ironbookshelves;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModItems;
+import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 import net.minecraft.world.item.CreativeModeTab.TabVisibility;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(IronbookshelvesMod.MODID)
@@ -24,7 +25,9 @@ public class IronbookshelvesMod {
     public IronbookshelvesMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, IronbookshelvesModConfig.COMMON_CONFIG);
+        TXFConfig.init(MODID, IronbookshelvesModConfig.class);
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfig.getScreen(parent, MODID)));
 
         IronbookshelvesModBlocks.REGISTRY.register(bus);
         IronbookshelvesModItems.REGISTRY.register(bus);

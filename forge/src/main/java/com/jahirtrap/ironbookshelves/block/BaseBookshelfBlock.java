@@ -22,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collections;
 import java.util.List;
 
-import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.ENABLE_TOOLTIPS;
+import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.enableTooltips;
 
 public class BaseBookshelfBlock extends Block {
     float power;
@@ -44,7 +44,7 @@ public class BaseBookshelfBlock extends Block {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag flag) {
-        if (ENABLE_TOOLTIPS.get()) {
+        if (enableTooltips && power != 0) {
             tooltip.add(TextUtils.coloredTextComponent("Ench Power: " + TextUtils.formatText(power), ChatFormatting.GRAY));
         }
     }
