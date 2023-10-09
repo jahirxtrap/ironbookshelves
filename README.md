@@ -28,10 +28,6 @@ Bookshelves with more enchantment power
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/jade" target="_blank">Jade mod</a>
 
-<strong>Forge dependencies:</strong>
-
-- <a href="https://www.curseforge.com/minecraft/mc-mods/configured" target="_blank">Configured mod</a> or <a href="https://www.curseforge.com/minecraft/mc-mods/config-menus-forge" target="_blank">Forge Config Screens mod</a> <strong>(Optional)</strong>
-
 <strong>Fabric/Quilt dependencies:</strong>
 
 - <a href="https://modrinth.com/mod/modmenu" target="_blank">Mod Menu mod</a> <strong>(Optional)</strong>
