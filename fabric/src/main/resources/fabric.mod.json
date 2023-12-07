@@ -25,10 +25,9 @@
 		"fabricloader": "${loader_version_range}",
 		"minecraft": "${minecraft_version_range}",
 		"java": ">=17",
-		"fabric": "*"
+		"fabric-api": "*"
 	},
-	"jars": [
-      		{"file": "META-INF/jars/mixinextras-fabric-0.2.0-rc.2.jar"},
-		{"file": "META-INF/jars/configlibtxf-${configlibtxf_version}-fabric.jar"}
-    	]
+	"jars": [{
+		"file": "META-INF/jars/configlibtxf-${configlibtxf_version}-fabric.jar"
+    	}]
 }

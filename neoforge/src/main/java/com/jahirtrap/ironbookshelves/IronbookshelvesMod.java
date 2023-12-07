@@ -1,18 +1,18 @@
 package com.jahirtrap.ironbookshelves;
 
+import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModItems;
-import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 import net.minecraft.world.item.CreativeModeTab.TabVisibility;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.ConfigScreenHandler;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.neoforge.client.ConfigScreenHandler;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 @Mod(IronbookshelvesMod.MODID)
