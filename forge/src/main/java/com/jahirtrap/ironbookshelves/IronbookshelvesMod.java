@@ -1,9 +1,9 @@
 package com.jahirtrap.ironbookshelves;
 
+import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModItems;
-import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 import net.minecraftforge.client.ConfigGuiHandler;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(IronbookshelvesMod.MODID)
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class IronbookshelvesMod {
 
     public static final String MODID = "ironbookshelves";
