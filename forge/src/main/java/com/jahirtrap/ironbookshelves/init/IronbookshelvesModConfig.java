@@ -1,6 +1,6 @@
 package com.jahirtrap.ironbookshelves.init;
 
-import com.jahirtrap.configlib.TXFConfig;
+import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 
 public class IronbookshelvesModConfig extends TXFConfig {
     @Entry(name = "Enable Tooltips")

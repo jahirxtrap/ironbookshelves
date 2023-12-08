@@ -1,9 +1,9 @@
 package com.jahirtrap.ironbookshelves;
 
-import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModItems;
+import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
