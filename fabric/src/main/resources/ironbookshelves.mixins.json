@@ -8,6 +8,7 @@
     "JadeCompatMixin",
     "EasyMagicCompatMixin",
     "EnchantingInfuserCompatMixin",
+    "AmethystImbuementCompatMixin",
     "ServerPlayerGameModeMixin"
   ],
   "injectors": {

@@ -24,12 +24,13 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    implementation project(":common")
+    compileOnly project(":common")
 
     modImplementation include(fileTree(dir: 'libs', include: ['*.jar']))
     modImplementation "maven.modrinth:easy-magic:v4.3.3-1.19.2-Fabric"
     modImplementation "maven.modrinth:enchanting-infuser:v4.2.2-1.19.2-Fabric"
     modImplementation "maven.modrinth:jade:8.7.3"
+    modImplementation "maven.modrinth:amethyst-imbuement:1.19-40"
 }
 
 loom {
