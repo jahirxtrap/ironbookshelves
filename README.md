@@ -21,6 +21,7 @@ Bookshelves with more enchantment power
 
 <strong>Compatible with:</strong>
 
+- <a href="https://www.curseforge.com/minecraft/mc-mods/amethyst-imbuement" target="_blank">Amethyst Imbuement mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/apotheosis" target="_blank">Apotheosis mod</a> / <a href="https://www.curseforge.com/minecraft/mc-mods/zenith" target="_blank">Zenith mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/easy-magic" target="_blank">Easy Magic mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/enchanting-infuser-forge" target="_blank">Enchanting Infuser mod</a>
