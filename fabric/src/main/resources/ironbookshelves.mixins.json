@@ -6,6 +6,7 @@
     "EnchantmentMenuMixin",
     "PuzzlesLibCompatMixin",
     "JadeCompatMixin",
+    "AmethystImbuementCompatMixin",
     "ServerPlayerGameModeMixin"
   ],
   "injectors": {
