@@ -1,7 +1,7 @@
 package com.jahirtrap.ironbookshelves.init.mixin;
 
 import com.jahirtrap.ironbookshelves.util.EnchantmentBonusBlock;
-import fuzs.puzzleslib.impl.core.FabricAbstractions;
+import fuzs.puzzleslib.fabric.impl.core.FabricAbstractions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
