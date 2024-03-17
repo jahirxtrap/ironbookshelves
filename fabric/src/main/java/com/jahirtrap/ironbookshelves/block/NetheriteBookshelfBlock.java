@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.nether
 
 public class NetheriteBookshelfBlock extends BaseBookshelfBlock {
     public NetheriteBookshelfBlock() {
-        super(SoundType.NETHERITE_BLOCK, 50f, 1200f, netheriteEnchantPower, 3, 0, PushReaction.NORMAL);
+        super(SoundType.NETHERITE_BLOCK, 50f, 1200f, netheriteEnchantPower, 0, PushReaction.NORMAL);
     }
 }
