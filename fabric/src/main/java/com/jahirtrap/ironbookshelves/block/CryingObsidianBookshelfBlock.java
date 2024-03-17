@@ -13,7 +13,7 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.crying
 
 public class CryingObsidianBookshelfBlock extends BaseBookshelfBlock {
     public CryingObsidianBookshelfBlock() {
-        super(SoundType.STONE, 50f, 1200f, cryingObsidianEnchantPower, 3, 10, PushReaction.BLOCK);
+        super(SoundType.STONE, 50f, 1200f, cryingObsidianEnchantPower, 10, PushReaction.BLOCK);
     }
 
     @Override
