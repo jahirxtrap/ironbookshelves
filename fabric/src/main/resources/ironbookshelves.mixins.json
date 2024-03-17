@@ -6,8 +6,7 @@
     "EnchantmentMenuMixin",
     "EnchantmentTableBlockMixin",
     "JadeCompatMixin",
-    "AmethystImbuementCompatMixin",
-    "ServerPlayerGameModeMixin"
+    "AmethystImbuementCompatMixin"
   ],
   "injectors": {
     "defaultRequire": 1

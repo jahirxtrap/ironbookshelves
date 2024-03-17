@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.copper
 
 public class CopperBookshelfBlock extends BaseBookshelfBlock {
     public CopperBookshelfBlock() {
-        super(SoundType.COPPER, 3f, 6f, copperEnchantPower, 1, 0, PushReaction.NORMAL);
+        super(SoundType.COPPER, 3f, 6f, copperEnchantPower, 0, PushReaction.NORMAL);
     }
 }

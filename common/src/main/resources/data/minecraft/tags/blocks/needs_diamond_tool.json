@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ironbookshelves:obsidian_bookshelf",
+    "ironbookshelves:netherite_bookshelf",
+    "ironbookshelves:crying_obsidian_bookshelf"
+  ]
+}

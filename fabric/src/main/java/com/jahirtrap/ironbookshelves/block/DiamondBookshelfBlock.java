@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.diamon
 
 public class DiamondBookshelfBlock extends BaseBookshelfBlock {
     public DiamondBookshelfBlock() {
-        super(SoundType.METAL, 5f, 6f, diamondEnchantPower, 2, 0, PushReaction.NORMAL);
+        super(SoundType.METAL, 5f, 6f, diamondEnchantPower, 0, PushReaction.NORMAL);
     }
 }
