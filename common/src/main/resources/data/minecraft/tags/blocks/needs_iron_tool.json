@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ironbookshelves:golden_bookshelf",
+    "ironbookshelves:diamond_bookshelf",
+    "ironbookshelves:emerald_bookshelf",
+    "ironbookshelves:steel_bookshelf",
+    "ironbookshelves:bronze_bookshelf"
+  ]
+}

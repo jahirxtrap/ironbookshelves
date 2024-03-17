@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.golden
 
 public class GoldenBookshelfBlock extends BaseBookshelfBlock {
     public GoldenBookshelfBlock() {
-        super(SoundType.METAL, 3f, 6f, goldenEnchantPower, 2, 0, PushReaction.NORMAL);
+        super(SoundType.METAL, 3f, 6f, goldenEnchantPower, 0, PushReaction.NORMAL);
     }
 }

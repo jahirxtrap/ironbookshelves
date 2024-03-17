@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.steelE
 
 public class SteelBookshelfBlock extends BaseBookshelfBlock {
     public SteelBookshelfBlock() {
-        super(SoundType.METAL, 5f, 6f, steelEnchantPower, 2, 0, PushReaction.NORMAL);
+        super(SoundType.METAL, 5f, 6f, steelEnchantPower, 0, PushReaction.NORMAL);
     }
 }
