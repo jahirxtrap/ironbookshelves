@@ -9,8 +9,7 @@
     "PuzzlesLibCompatMixin",
     "EasyMagicCompatMixin",
     "EnchantingInfuserCompatMixin",
-    "AmethystImbuementCompatMixin",
-    "ServerPlayerGameModeMixin"
+    "AmethystImbuementCompatMixin"
   ],
   "injectors": {
     "defaultRequire": 1

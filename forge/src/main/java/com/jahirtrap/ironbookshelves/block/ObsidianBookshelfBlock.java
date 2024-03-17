@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.obsidi
 
 public class ObsidianBookshelfBlock extends BaseBookshelfBlock {
     public ObsidianBookshelfBlock() {
-        super(SoundType.STONE, 50f, 1200f, obsidianEnchantPower, 3, 0, PushReaction.BLOCK);
+        super(SoundType.STONE, 50f, 1200f, obsidianEnchantPower, 0, PushReaction.BLOCK);
     }
 }

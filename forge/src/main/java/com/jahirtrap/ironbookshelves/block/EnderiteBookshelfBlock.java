@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.enderi
 
 public class EnderiteBookshelfBlock extends BaseBookshelfBlock {
     public EnderiteBookshelfBlock() {
-        super(SoundType.NETHERITE_BLOCK, 66f, 1200f, enderiteEnchantPower, 4, 0, PushReaction.NORMAL);
+        super(SoundType.NETHERITE_BLOCK, 66f, 1200f, enderiteEnchantPower, 0, PushReaction.NORMAL);
     }
 }

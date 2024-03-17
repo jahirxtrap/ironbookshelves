@@ -7,6 +7,6 @@ import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.emeral
 
 public class EmeraldBookshelfBlock extends BaseBookshelfBlock {
     public EmeraldBookshelfBlock() {
-        super(SoundType.METAL, 5f, 6f, emeraldEnchantPower, 2, 0, PushReaction.NORMAL);
+        super(SoundType.METAL, 5f, 6f, emeraldEnchantPower, 0, PushReaction.NORMAL);
     }
 }
