@@ -11,7 +11,7 @@ import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.ConfigScreenHandler;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 @Mod(IronbookshelvesMod.MODID)
@@ -21,8 +21,8 @@ public class IronbookshelvesMod {
 
     public IronbookshelvesMod(IEventBus bus) {
         TXFConfig.init(MODID, IronbookshelvesModConfig.class);
-        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
-                new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfig.getScreen(parent, MODID)));
+        ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () ->
+                (client, parent) -> TXFConfig.getScreen(parent, MODID));
 
         IronbookshelvesModBlocks.REGISTRY.register(bus);
         IronbookshelvesModItems.REGISTRY.register(bus);

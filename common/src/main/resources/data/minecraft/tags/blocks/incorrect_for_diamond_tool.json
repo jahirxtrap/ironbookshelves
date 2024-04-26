@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:amethyst_shard"
+    "#minecraft:needs_netherite_tool"
   ]
 }

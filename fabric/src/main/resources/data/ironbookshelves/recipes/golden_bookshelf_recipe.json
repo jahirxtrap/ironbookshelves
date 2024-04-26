@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "tag": "c:gold_ingots"
+      "tag": "c:ingots/gold"
     },
     "B": {
       "item": "ironbookshelves:iron_bookshelf"
     }
   },
   "result": {
-    "item": "ironbookshelves:golden_bookshelf",
+    "id": "ironbookshelves:golden_bookshelf",
     "count": 1
   }
 }

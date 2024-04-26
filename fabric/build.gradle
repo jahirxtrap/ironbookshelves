@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'idea'
     id 'maven-publish'
-    id 'fabric-loom' version '1.5-SNAPSHOT'
+    id 'fabric-loom' version '1.6-SNAPSHOT'
 }
 
 version = "${version}-fabric"
@@ -28,7 +28,7 @@ dependencies {
 
     modImplementation include(fileTree(dir: 'libs', include: ['*.jar']))
     modImplementation "maven.modrinth:puzzles-lib:v20.4.36-1.20.4-Fabric"
-    modImplementation "maven.modrinth:jade:13.0.0"
+    modImplementation "maven.modrinth:jade:14.0.2+fabric"
     modImplementation "maven.modrinth:amethyst-imbuement:1.20.1-18"
 }
 
@@ -82,7 +82,7 @@ processResources {
     filesMatching(resourceTargets) {
         expand replaceProperties
     }
-    exclude '**/data/apotheosis/**', '**/data/forge/**'
+    exclude '**/data/forge/**', '**/data/neoforge/**'
     from project(":common").sourceSets.main.resources
 }
 

@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/steel"
+      "tag": "c:ingots/steel"
     },
     "B": {
       "item": "ironbookshelves:iron_bookshelf"
     }
   },
   "result": {
-    "item": "ironbookshelves:steel_bookshelf",
+    "id": "ironbookshelves:steel_bookshelf",
     "count": 1
   }
 }

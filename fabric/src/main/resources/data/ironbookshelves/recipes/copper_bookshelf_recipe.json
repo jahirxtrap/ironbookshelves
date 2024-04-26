@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "tag": "c:copper_ingots"
+      "tag": "c:ingots/copper"
     },
     "B": {
       "tag": "c:bookshelves"
     }
   },
   "result": {
-    "item": "ironbookshelves:copper_bookshelf",
+    "id": "ironbookshelves:copper_bookshelf",
     "count": 1
   }
 }

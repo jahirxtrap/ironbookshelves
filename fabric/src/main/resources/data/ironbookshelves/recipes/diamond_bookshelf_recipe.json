@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "tag": "c:diamonds"
+      "tag": "c:gems/diamond"
     },
     "B": {
       "item": "ironbookshelves:golden_bookshelf"
     }
   },
   "result": {
-    "item": "ironbookshelves:diamond_bookshelf",
+    "id": "ironbookshelves:diamond_bookshelf",
     "count": 1
   }
 }

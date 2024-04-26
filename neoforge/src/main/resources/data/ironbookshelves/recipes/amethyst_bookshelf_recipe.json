@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:gems/amethyst"
+      "tag": "c:gems/amethyst"
     },
     "B": {
-      "tag": "forge:bookshelves"
+      "tag": "c:bookshelves"
     }
   },
   "result": {
-    "item": "ironbookshelves:amethyst_bookshelf",
+    "id": "ironbookshelves:amethyst_bookshelf",
     "count": 1
   }
 }

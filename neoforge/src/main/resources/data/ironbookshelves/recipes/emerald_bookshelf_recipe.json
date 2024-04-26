@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:gems/emerald"
+      "tag": "c:gems/emerald"
     },
     "B": {
       "item": "ironbookshelves:diamond_bookshelf"
     }
   },
   "result": {
-    "item": "ironbookshelves:emerald_bookshelf",
+    "id": "ironbookshelves:emerald_bookshelf",
     "count": 1
   }
 }
