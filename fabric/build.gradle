@@ -84,7 +84,7 @@ processResources {
     filesMatching(resourceTargets) {
         expand replaceProperties
     }
-    exclude '**/data/apotheosis/**', '**/data/forge/**'
+    exclude '**/data/forge/**'
     from project(":common").sourceSets.main.resources
 }
 
