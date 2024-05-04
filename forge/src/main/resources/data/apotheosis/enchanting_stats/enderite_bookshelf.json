@@ -1,0 +1,9 @@
+{
+  "block": "ironbookshelves:enderite_bookshelf",
+  "stats": {
+    "maxEterna": 45,
+    "eterna": 4.5,
+    "quanta": 3.5,
+    "arcana": 3.5
+  }
+}
