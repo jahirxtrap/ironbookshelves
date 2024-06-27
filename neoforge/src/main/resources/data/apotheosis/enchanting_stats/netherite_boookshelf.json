@@ -1,0 +1,9 @@
+{
+  "block": "ironbookshelves:netherite_bookshelf",
+  "stats": {
+    "maxEterna": 40,
+    "eterna": 4.0,
+    "quanta": 3,
+    "arcana": 3
+  }
+}
