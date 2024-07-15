@@ -1,7 +1,6 @@
 package com.jahirtrap.ironbookshelves.block;
 
 import com.jahirtrap.ironbookshelves.util.EnchantmentBonusBlock;
-import com.jahirtrap.ironbookshelves.util.TextUtils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -18,14 +17,16 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.List;
 
 import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.enableTooltips;
+import static com.jahirtrap.ironbookshelves.util.CommonUtils.coloredTextComponent;
+import static com.jahirtrap.ironbookshelves.util.CommonUtils.formatText;
 
 public class BaseBookshelfBlock extends Block implements EnchantmentBonusBlock {
-    float power;
+    private final float power;
 
-    public BaseBookshelfBlock(SoundType soundType, float hardness, float resistance, double enchantPower, int lightLevel, PushReaction pushReaction) {
+    public BaseBookshelfBlock(SoundType soundType, float hardness, float resistance, double power, int lightLevel, PushReaction pushReaction) {
         super(Properties.of().mapColor(MapColor.METAL).sound(soundType).strength(hardness, resistance).requiresCorrectToolForDrops()
                 .lightLevel($ -> lightLevel).pushReaction(pushReaction));
-        power = (float) enchantPower;
+        this.power = (float) power;
     }
 
     @Override
@@ -36,7 +37,7 @@ public class BaseBookshelfBlock extends Block implements EnchantmentBonusBlock {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext tooltipContext, List<Component> tooltip, TooltipFlag flag) {
         if (enableTooltips && power != 0) {
-            tooltip.add(TextUtils.coloredTextComponent("Ench Power: " + TextUtils.formatText(power), ChatFormatting.GRAY));
+            tooltip.add(coloredTextComponent("Ench Power: " + formatText(power), ChatFormatting.GRAY));
         }
     }
 }

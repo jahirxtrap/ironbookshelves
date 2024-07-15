@@ -17,6 +17,10 @@ public class IronbookshelvesMod implements ModInitializer {
     public void onInitialize() {
         TXFConfig.init(MODID, IronbookshelvesModConfig.class);
         IronbookshelvesModBlocks.init();
+        buildContents();
+    }
+
+    public void buildContents() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
             event.addAfter(new ItemStack(Items.BOOKSHELF), IronbookshelvesModBlocks.IRON_BOOKSHELF);
             event.addAfter(new ItemStack(IronbookshelvesModBlocks.IRON_BOOKSHELF), new ItemStack(IronbookshelvesModBlocks.GOLDEN_BOOKSHELF));
