@@ -11,7 +11,6 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -30,10 +29,10 @@ public class IronbookshelvesMod {
 
         IronbookshelvesModBlocks.REGISTRY.register(bus);
         IronbookshelvesModItems.REGISTRY.register(bus);
+        bus.addListener(this::buildContents);
     }
 
-    @SubscribeEvent
-    public static void onCreativeModeTabBuildContents(CreativeModeTabEvent.BuildContents event) {
+    public void buildContents(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.getEntries().putAfter(new ItemStack(Items.BOOKSHELF), new ItemStack(IronbookshelvesModItems.IRON_BOOKSHELF.get()), TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(IronbookshelvesModItems.IRON_BOOKSHELF.get()), new ItemStack(IronbookshelvesModItems.GOLDEN_BOOKSHELF.get()), TabVisibility.PARENT_AND_SEARCH_TABS);
