@@ -3,7 +3,7 @@ package com.jahirtrap.ironbookshelves.util;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 
-public class TextUtils {
+public class CommonUtils {
     public static Component coloredTextComponent(String string, ChatFormatting color) {
         var textComponent = Component.literal(string);
         textComponent.withStyle(color);
