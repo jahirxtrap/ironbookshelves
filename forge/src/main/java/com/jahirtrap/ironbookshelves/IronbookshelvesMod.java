@@ -4,6 +4,7 @@ import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
 import com.jahirtrap.ironbookshelves.init.IronbookshelvesModItems;
 import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
+import com.jahirtrap.ironbookshelves.util.configlib.TXFConfigClient;
 import net.minecraft.world.item.CreativeModeTab.TabVisibility;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
@@ -25,7 +26,7 @@ public class IronbookshelvesMod {
 
         TXFConfig.init(MODID, IronbookshelvesModConfig.class);
         ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
-                new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfig.getScreen(parent, MODID)));
+                new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfigClient.getScreen(parent, MODID)));
 
         IronbookshelvesModBlocks.REGISTRY.register(bus);
         IronbookshelvesModItems.REGISTRY.register(bus);
