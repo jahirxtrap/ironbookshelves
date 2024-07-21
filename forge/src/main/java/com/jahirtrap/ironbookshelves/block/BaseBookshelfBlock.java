@@ -1,8 +1,10 @@
 package com.jahirtrap.ironbookshelves.block;
 
+import com.jahirtrap.ironbookshelves.init.ModConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
@@ -16,7 +18,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig.enableTooltips;
 import static com.jahirtrap.ironbookshelves.util.CommonUtils.coloredTextComponent;
 import static com.jahirtrap.ironbookshelves.util.CommonUtils.formatText;
 
@@ -38,9 +39,8 @@ public class BaseBookshelfBlock extends Block {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag flag) {
-        if (enableTooltips && power != 0) {
-            tooltip.add(coloredTextComponent("Ench Power: " + formatText(power), ChatFormatting.GRAY));
-        }
+        if (ModConfig.enableTooltips && power != 0)
+            tooltip.add(coloredTextComponent(new TranslatableComponent("ironbookshelves.bookshelf.power").getString() + formatText(power), ChatFormatting.GRAY));
     }
 
     @Override

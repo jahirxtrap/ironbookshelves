@@ -1,8 +1,7 @@
 package com.jahirtrap.ironbookshelves;
 
-import com.jahirtrap.ironbookshelves.init.IronbookshelvesModBlocks;
-import com.jahirtrap.ironbookshelves.init.IronbookshelvesModConfig;
-import com.jahirtrap.ironbookshelves.init.IronbookshelvesModItems;
+import com.jahirtrap.ironbookshelves.init.ModConfig;
+import com.jahirtrap.ironbookshelves.init.ModItems;
 import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 import net.minecraftforge.client.ConfigGuiHandler;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,11 +17,10 @@ public class IronbookshelvesMod {
     public IronbookshelvesMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        TXFConfig.init(MODID, IronbookshelvesModConfig.class);
+        TXFConfig.init(MODID, ModConfig.class);
         ModLoadingContext.get().registerExtensionPoint(ConfigGuiHandler.ConfigGuiFactory.class, () ->
                 new ConfigGuiHandler.ConfigGuiFactory((client, parent) -> TXFConfig.getScreen(parent, MODID)));
 
-        IronbookshelvesModBlocks.REGISTRY.register(bus);
-        IronbookshelvesModItems.REGISTRY.register(bus);
+        ModItems.init(bus);
     }
 }
