@@ -21,7 +21,7 @@ public class AmethystImbuementCompatMixin {
             BlockPos actualPos = pos.offset(blockPos);
             BlockState state = level.getBlockState(actualPos);
             if (state.getBlock() instanceof EnchantmentBonusBlock bonusBlock)
-                i += bonusBlock.getEnchantPowerBonus(state, level, actualPos);
+                i += bonusBlock.getEnchantPowerBonus(state, level, actualPos) - 1;
             if (!EnchantingTableBlock.isValidBookShelf(level, pos, blockPos)) continue;
             i++;
         }
