@@ -13,17 +13,16 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(EnchantmentMenu.class)
 public abstract class EnchantmentMenuMixin {
-    @ModifyVariable(
-            method = {"method_17411", "m_mpsetdhw", "lambda$slotsChanged$0"},
-            at = @At(value = "STORE", ordinal = 0), ordinal = 0, remap = false
-    )
-    private int modifyEnchantValue(int obj, ItemStack stack, Level level, BlockPos pos) {
+
+    @ModifyVariable(method = "method_17411", at = @At(value = "STORE", ordinal = 0), ordinal = 0, remap = false)
+    private int modifyEnchantValue(int i, ItemStack stack, Level level, BlockPos pos) {
+        float j = 0;
         for (BlockPos blockPos : EnchantingTableBlock.BOOKSHELF_OFFSETS) {
             BlockPos actualPos = pos.offset(blockPos);
             BlockState state = level.getBlockState(actualPos);
             if (state.getBlock() instanceof EnchantmentBonusBlock bonusBlock)
-                obj += bonusBlock.getEnchantPowerBonus(state, level, actualPos);
+                j += bonusBlock.getEnchantPowerBonus(state, level, actualPos) - 1;
         }
-        return obj;
+        return Math.round(j);
     }
 }
