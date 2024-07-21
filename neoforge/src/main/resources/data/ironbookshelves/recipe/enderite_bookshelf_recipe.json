@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": {
-      "item": "enderitemod:enderite_ingot"
+      "tag": "c:ingots/enderite"
     },
     "B": {
       "item": "ironbookshelves:netherite_bookshelf"
