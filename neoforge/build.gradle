@@ -107,6 +107,11 @@ modrinth {
     group = "publishing"
 }
 
+tasks.register('publish') {
+    dependsOn 'curseforge', 'modrinth'
+    group = "publishing"
+}
+
 ["curseforge", "modrinth"].each { task ->
     tasks.named(task) {
         mustRunAfter(":forge:$task")
