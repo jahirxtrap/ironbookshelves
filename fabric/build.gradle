@@ -116,3 +116,8 @@ modrinth {
     changelog = rootProject.file("CHANGELOG.md").text
     group = "publishing"
 }
+
+tasks.register('publish') {
+    dependsOn 'curseforge', 'modrinth'
+    group = "publishing"
+}
