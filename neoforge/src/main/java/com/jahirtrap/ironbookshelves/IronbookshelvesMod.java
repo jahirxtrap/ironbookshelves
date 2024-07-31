@@ -1,7 +1,7 @@
 package com.jahirtrap.ironbookshelves;
 
 import com.jahirtrap.ironbookshelves.init.ModConfig;
-import com.jahirtrap.ironbookshelves.init.ModItems;
+import com.jahirtrap.ironbookshelves.init.ModContent;
 import com.jahirtrap.ironbookshelves.util.configlib.TXFConfig;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -23,13 +23,13 @@ public class IronbookshelvesMod {
         ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () ->
                 (client, parent) -> TXFConfig.getScreen(parent, MODID));
 
-        ModItems.init(bus);
+        ModContent.init(bus);
         bus.addListener(this::buildContents);
     }
 
     public void buildContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            putAfter(event, Items.BOOKSHELF, ModItems.IRON_BOOKSHELF, ModItems.GOLDEN_BOOKSHELF, ModItems.DIAMOND_BOOKSHELF, ModItems.EMERALD_BOOKSHELF, ModItems.OBSIDIAN_BOOKSHELF, ModItems.NETHERITE_BOOKSHELF, ModItems.COPPER_BOOKSHELF, ModItems.AMETHYST_BOOKSHELF, ModItems.CRYING_OBSIDIAN_BOOKSHELF, ModItems.ENDERITE_BOOKSHELF, ModItems.STEEL_BOOKSHELF, ModItems.BRONZE_BOOKSHELF);
+            putAfter(event, Items.BOOKSHELF, ModContent.IRON_BOOKSHELF, ModContent.GOLDEN_BOOKSHELF, ModContent.DIAMOND_BOOKSHELF, ModContent.EMERALD_BOOKSHELF, ModContent.OBSIDIAN_BOOKSHELF, ModContent.NETHERITE_BOOKSHELF, ModContent.COPPER_BOOKSHELF, ModContent.AMETHYST_BOOKSHELF, ModContent.CRYING_OBSIDIAN_BOOKSHELF, ModContent.ENDERITE_BOOKSHELF, ModContent.STEEL_BOOKSHELF, ModContent.BRONZE_BOOKSHELF);
         }
     }
 }
