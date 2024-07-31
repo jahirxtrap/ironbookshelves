@@ -14,7 +14,7 @@ import net.minecraft.world.level.material.PushReaction;
 
 import static com.jahirtrap.ironbookshelves.IronbookshelvesMod.MODID;
 
-public class ModItems {
+public class ModContent {
     public static final Block IRON_BOOKSHELF = registerBlock("iron_bookshelf", new BaseBookshelfBlock(SoundType.METAL, 5f, 6f, ModConfig.ironEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
     public static final Block GOLDEN_BOOKSHELF = registerBlock("golden_bookshelf", new BaseBookshelfBlock(SoundType.METAL, 3f, 6f, ModConfig.goldenEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
     public static final Block DIAMOND_BOOKSHELF = registerBlock("diamond_bookshelf", new BaseBookshelfBlock(SoundType.METAL, 5f, 6f, ModConfig.diamondEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());

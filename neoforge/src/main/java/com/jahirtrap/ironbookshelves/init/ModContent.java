@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 import static com.jahirtrap.ironbookshelves.IronbookshelvesMod.MODID;
 
-public class ModItems {
+public class ModContent {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
