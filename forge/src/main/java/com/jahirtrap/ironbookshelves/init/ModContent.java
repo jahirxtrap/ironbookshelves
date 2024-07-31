@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 import static com.jahirtrap.ironbookshelves.IronbookshelvesMod.MODID;
 
-public class ModItems {
+public class ModContent {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registry.BLOCK_REGISTRY, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registry.ITEM_REGISTRY, MODID);
 
