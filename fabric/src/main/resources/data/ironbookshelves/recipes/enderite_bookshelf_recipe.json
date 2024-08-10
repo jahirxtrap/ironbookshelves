@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": {
-      "tag": "c:ingots/enderite"
+      "item": "enderitemod:enderite_ingot"
     },
     "B": {
       "item": "ironbookshelves:netherite_bookshelf"
@@ -17,5 +17,13 @@
   "result": {
     "id": "ironbookshelves:enderite_bookshelf",
     "count": 1
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "enderitemod"
+      ]
+    }
+  ]
 }

@@ -17,5 +17,13 @@
   "result": {
     "id": "ironbookshelves:bronze_bookshelf",
     "count": 1
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:ingots/bronze"
+      ]
+    }
+  ]
 }

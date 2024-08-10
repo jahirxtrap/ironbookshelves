@@ -17,5 +17,14 @@
   "result": {
     "id": "ironbookshelves:steel_bookshelf",
     "count": 1
-  }
+  },
+  "conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/steel"
+      }
+    }
+  ]
 }

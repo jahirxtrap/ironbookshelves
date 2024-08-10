@@ -17,5 +17,14 @@
   "result": {
     "id": "ironbookshelves:bronze_bookshelf",
     "count": 1
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/bronze"
+      }
+    }
+  ]
 }
