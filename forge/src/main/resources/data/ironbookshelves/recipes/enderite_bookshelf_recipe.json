@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/enderite"
+      "item": "enderitemod:enderite_ingot"
     },
     "B": {
       "item": "ironbookshelves:netherite_bookshelf"
@@ -17,5 +17,11 @@
   "result": {
     "item": "ironbookshelves:enderite_bookshelf",
     "count": 1
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enderitemod"
+    }
+  ]
 }
