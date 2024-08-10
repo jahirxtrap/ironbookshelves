@@ -17,5 +17,13 @@
   "result": {
     "item": "ironbookshelves:steel_bookshelf",
     "count": 1
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:steel_ingots"
+      ]
+    }
+  ]
 }
