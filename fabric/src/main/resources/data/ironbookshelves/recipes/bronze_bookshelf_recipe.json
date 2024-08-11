@@ -20,7 +20,7 @@
   },
   "fabric:load_conditions": [
     {
-      "condition": "fabric:tags_populated",
+      "condition": "fabric:item_tags_populated",
       "values": [
         "c:bronze_ingots"
       ]
