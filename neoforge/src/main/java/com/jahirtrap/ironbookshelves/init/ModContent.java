@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -34,9 +35,13 @@ public class ModContent {
     public static final DeferredBlock<Block> BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", () -> new BaseBookshelfBlock(SoundType.METAL, 5f, 6f, ModConfig.bronzeEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
 
     public static DeferredBlock<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties properties) {
-        var block = BLOCKS.register(name, supplier);
-        ITEMS.register(name, () -> new BlockItem(block.get(), properties));
-        return block;
+        var blockReg = BLOCKS.register(name, supplier);
+        registerItem(name, () -> new BlockItem(blockReg.get(), properties));
+        return blockReg;
+    }
+
+    public static DeferredItem<Item> registerItem(String name, Supplier<Item> supplier) {
+        return ITEMS.register(name, supplier);
     }
 
     public static void init(IEventBus bus) {

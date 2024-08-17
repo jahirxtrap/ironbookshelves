@@ -12,9 +12,14 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.PushReaction;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.jahirtrap.ironbookshelves.IronbookshelvesMod.MODID;
 
 public class ModContent {
+    public static final List<Item> ITEMS = new ArrayList<>();
+
     public static final Block IRON_BOOKSHELF = registerBlock("iron_bookshelf", new BaseBookshelfBlock(SoundType.METAL, 5f, 6f, ModConfig.ironEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
     public static final Block GOLDEN_BOOKSHELF = registerBlock("golden_bookshelf", new BaseBookshelfBlock(SoundType.METAL, 3f, 6f, ModConfig.goldenEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
     public static final Block DIAMOND_BOOKSHELF = registerBlock("diamond_bookshelf", new BaseBookshelfBlock(SoundType.METAL, 5f, 6f, ModConfig.diamondEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
@@ -29,8 +34,14 @@ public class ModContent {
     public static final Block BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", new BaseBookshelfBlock(SoundType.METAL, 5f, 6f, ModConfig.bronzeEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
 
     public static Block registerBlock(String name, Block block, Item.Properties properties) {
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MODID, name), new BlockItem(block, properties));
+        registerItem(name, new BlockItem(block, properties));
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(MODID, name), block);
+    }
+
+    public static Item registerItem(String name, Item item) {
+        var itemReg = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MODID, name), item);
+        ITEMS.add(itemReg);
+        return itemReg;
     }
 
     public static void init() {
