@@ -36,9 +36,13 @@ public class ModContent {
     public static final RegistryObject<Block> BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", () -> new BaseBookshelfBlock(SoundType.METAL, 5f, 6f, ModConfig.bronzeEnchantPower, 0, PushReaction.NORMAL), new Item.Properties());
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties properties) {
-        var block = BLOCKS.register(name, supplier);
-        ITEMS.register(name, () -> new BlockItem(block.get(), properties.tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-        return block;
+        var blockReg = BLOCKS.register(name, supplier);
+        registerItem(name, () -> new BlockItem(blockReg.get(), properties.tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        return blockReg;
+    }
+
+    public static RegistryObject<Item> registerItem(String name, Supplier<Item> supplier) {
+        return ITEMS.register(name, supplier);
     }
 
     public static void init(IEventBus bus) {
