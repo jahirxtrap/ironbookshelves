@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ModEnchantmentMenu.class)
-public class EasyMagicCompatMixin {
+public abstract class EasyMagicCompatMixin {
 
     @Inject(method = "getEnchantingPower", at = @At("HEAD"), cancellable = true)
     private void getEnchantingPower(Level level, BlockPos pos, CallbackInfoReturnable<Integer> cir) {
