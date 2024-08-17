@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ImbuingTableScreenHandler.class)
-public class AmethystImbuementCompatMixin {
+public abstract class AmethystImbuementCompatMixin {
 
     @Inject(method = "checkBookshelves", at = @At("HEAD"), cancellable = true)
     private void getEnchantPowerBonus(Level level, BlockPos pos, CallbackInfoReturnable<Integer> cir) {
