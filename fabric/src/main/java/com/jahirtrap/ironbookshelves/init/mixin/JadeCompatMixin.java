@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import snownee.jade.util.PlatformProxy;
 
 @Mixin(PlatformProxy.class)
-public class JadeCompatMixin {
+public abstract class JadeCompatMixin {
 
     @Inject(method = "getEnchantPowerBonus", at = @At("HEAD"), cancellable = true)
     private static void getEnchantPowerBonus(BlockState state, Level level, BlockPos pos, CallbackInfoReturnable<Float> cir) {

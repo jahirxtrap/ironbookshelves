@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(FabricAbstractions.class)
-public class EasyMagicCompatMixin {
+public abstract class EasyMagicCompatMixin {
 
     @Inject(method = "getEnchantPowerBonus", at = @At("HEAD"), cancellable = true)
     private void getEnchantPowerBonus(BlockState state, Level level, BlockPos pos, CallbackInfoReturnable<Float> cir) {
