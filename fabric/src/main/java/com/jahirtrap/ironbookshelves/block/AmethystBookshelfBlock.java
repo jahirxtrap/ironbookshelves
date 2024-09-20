@@ -18,7 +18,7 @@ public class AmethystBookshelfBlock extends BaseBookshelfBlock {
 
     @Override
     public void onProjectileHit(Level level, BlockState state, BlockHitResult hitResult, Projectile projectile) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockPos pos = hitResult.getBlockPos();
             level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_HIT, SoundSource.BLOCKS, 1, 0.5f + level.random.nextFloat() * 1.2f);
             level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1, 0.5f + level.random.nextFloat() * 1.2f);
