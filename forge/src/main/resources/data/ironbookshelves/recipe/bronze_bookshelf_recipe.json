@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/bronze"
+      "tag": "c:ingots/bronze"
     },
     "B": {
       "item": "ironbookshelves:golden_bookshelf"
@@ -23,7 +23,7 @@
       "type": "forge:not",
       "value": {
         "type": "forge:tag_empty",
-        "tag": "forge:ingots/bronze"
+        "tag": "c:ingots/bronze"
       }
     }
   ]

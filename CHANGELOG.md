@@ -1,1 +1,2 @@
-- Some fixes
+- Updated Forge version
+- Updated tags and recipes

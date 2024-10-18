@@ -18,8 +18,8 @@ public class IronbookshelvesMod {
 
     public static final String MODID = "ironbookshelves";
 
-    public IronbookshelvesMod() {
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+    public IronbookshelvesMod(FMLJavaModLoadingContext context) {
+        IEventBus bus = context.getModEventBus();
 
         TXFConfig.init(MODID, ModConfig.class);
         ModContent.init(bus);
