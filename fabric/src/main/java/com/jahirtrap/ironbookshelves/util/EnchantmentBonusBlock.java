@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 public interface EnchantmentBonusBlock {
-    default float getEnchantPowerBonus(BlockState state, LevelReader world, BlockPos pos) {
+    default float getEnchantPowerBonus(BlockState state, LevelReader level, BlockPos pos) {
         return state.is(Blocks.BOOKSHELF) ? 1 : 0;
     }
 }
