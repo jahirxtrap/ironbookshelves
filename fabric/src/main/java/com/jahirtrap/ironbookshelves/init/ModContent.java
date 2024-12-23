@@ -38,17 +38,17 @@ public class ModContent {
     public static final Block STEEL_BOOKSHELF = registerBlock("steel_bookshelf", (p) -> new BaseBookshelfBlock(ModConfig.steelEnchantPower, p), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops(), new Item.Properties());
     public static final Block BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", (p) -> new BaseBookshelfBlock(ModConfig.bronzeEnchantPower, p), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops(), new Item.Properties());
 
-    public static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp, Item.Properties itemProp) {
+    private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp, Item.Properties itemProp) {
         var blockReg = registerBlock(name, function, blockProp);
         registerItem(name, (p) -> new BlockItem(blockReg, p), itemProp.useBlockDescriptionPrefix());
         return blockReg;
     }
 
-    public static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp) {
+    private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp) {
         return Registry.register(BuiltInRegistries.BLOCK, ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name)), function.apply(blockProp.setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name)))));
     }
 
-    public static Item registerItem(String name, Function<Item.Properties, Item> function, Item.Properties itemProp) {
+    private static Item registerItem(String name, Function<Item.Properties, Item> function, Item.Properties itemProp) {
         var itemReg = Registry.register(BuiltInRegistries.ITEM, ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name)), function.apply(itemProp.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name)))));
         ITEMS.add(itemReg);
         return itemReg;
