@@ -37,17 +37,17 @@ public class ModContent {
     public static final RegistryObject<Block> STEEL_BOOKSHELF = registerBlock("steel_bookshelf", () -> new BaseBookshelfBlock(ModConfig.steelEnchantPower, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops()), new Item.Properties());
     public static final RegistryObject<Block> BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", () -> new BaseBookshelfBlock(ModConfig.bronzeEnchantPower, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops()), new Item.Properties());
 
-    public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties itemProp) {
+    private static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties itemProp) {
         var blockReg = registerBlock(name, supplier);
         registerItem(name, () -> new BlockItem(blockReg.get(), itemProp));
         return blockReg;
     }
 
-    public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier) {
+    private static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier) {
         return BLOCKS.register(name, supplier);
     }
 
-    public static RegistryObject<Item> registerItem(String name, Supplier<Item> supplier) {
+    private static RegistryObject<Item> registerItem(String name, Supplier<Item> supplier) {
         return ITEMS.register(name, supplier);
     }
 
