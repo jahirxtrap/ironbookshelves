@@ -7,12 +7,8 @@
     " # "
   ],
   "key": {
-    "#": {
-      "tag": "c:ingots/bronze"
-    },
-    "B": {
-      "item": "ironbookshelves:golden_bookshelf"
-    }
+    "#": "#c:ingots/bronze",
+    "B": "ironbookshelves:golden_bookshelf"
   },
   "result": {
     "id": "ironbookshelves:bronze_bookshelf",

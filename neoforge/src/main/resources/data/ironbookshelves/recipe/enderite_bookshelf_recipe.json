@@ -7,12 +7,8 @@
     " # "
   ],
   "key": {
-    "#": {
-      "item": "enderitemod:enderite_ingot"
-    },
-    "B": {
-      "item": "ironbookshelves:netherite_bookshelf"
-    }
+    "#": "enderitemod:enderite_ingot",
+    "B": "ironbookshelves:netherite_bookshelf"
   },
   "result": {
     "id": "ironbookshelves:enderite_bookshelf",

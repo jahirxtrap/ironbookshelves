@@ -7,12 +7,8 @@
     "###"
   ],
   "key": {
-    "#": {
-      "tag": "c:ingots/iron"
-    },
-    "B": {
-      "tag": "c:bookshelves"
-    }
+    "#": "#c:ingots/iron",
+    "B": "#c:bookshelves"
   },
   "result": {
     "id": "ironbookshelves:iron_bookshelf",

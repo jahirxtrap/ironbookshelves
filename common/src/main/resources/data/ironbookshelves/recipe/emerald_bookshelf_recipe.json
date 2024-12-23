@@ -7,12 +7,8 @@
     "###"
   ],
   "key": {
-    "#": {
-      "tag": "c:gems/emerald"
-    },
-    "B": {
-      "item": "ironbookshelves:diamond_bookshelf"
-    }
+    "#": "#c:gems/emerald",
+    "B": "ironbookshelves:diamond_bookshelf"
   },
   "result": {
     "id": "ironbookshelves:emerald_bookshelf",

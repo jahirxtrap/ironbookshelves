@@ -7,12 +7,8 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:obsidian"
-    },
-    "B": {
-      "item": "ironbookshelves:emerald_bookshelf"
-    }
+    "#": "minecraft:obsidian",
+    "B": "ironbookshelves:emerald_bookshelf"
   },
   "result": {
     "id": "ironbookshelves:obsidian_bookshelf",
