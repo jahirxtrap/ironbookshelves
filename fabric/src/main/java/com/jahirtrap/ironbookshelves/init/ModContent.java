@@ -31,16 +31,16 @@ public class ModContent {
     public static final Block STEEL_BOOKSHELF = registerBlock("steel_bookshelf", new BaseBookshelfBlock(ModConfig.steelEnchantPower, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops()), new Item.Properties());
     public static final Block BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", new BaseBookshelfBlock(ModConfig.bronzeEnchantPower, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops()), new Item.Properties());
 
-    public static Block registerBlock(String name, Block block, Item.Properties itemProp) {
+    private static Block registerBlock(String name, Block block, Item.Properties itemProp) {
         registerItem(name, new BlockItem(block, itemProp.tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
         return registerBlock(name, block);
     }
 
-    public static Block registerBlock(String name, Block block) {
+    private static Block registerBlock(String name, Block block) {
         return Registry.register(Registry.BLOCK, new ResourceLocation(MODID, name), block);
     }
 
-    public static Item registerItem(String name, Item item) {
+    private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new ResourceLocation(MODID, name), item);
     }
 
