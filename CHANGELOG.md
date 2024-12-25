@@ -1,1 +1,1 @@
-- Fixed recipes (<a href="https://github.com/jahirxtrap/ironbookshelves/issues/10">Issue #10</a>)
+- Jade compat
