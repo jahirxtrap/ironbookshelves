@@ -38,10 +38,18 @@ neoForge {
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
+repositories {
+    maven {
+        name "modrinth"
+        url "https://api.modrinth.com/maven"
+    }
+}
+
 dependencies {
     compileOnly project(":common")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "maven.modrinth:jade:17.1.2+neoforge"
     jarJar "com.jahirtrap:configlibtxf:${configlibtxf_version}-neoforge"
 }
 
