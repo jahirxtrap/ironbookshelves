@@ -1,1 +1,1 @@
-- Jade compat
+- Updated config lib
