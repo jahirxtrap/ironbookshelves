@@ -3,8 +3,6 @@ package com.jahirtrap.ironbookshelves.init;
 import com.jahirtrap.configlib.TXFConfig;
 
 public class ModConfig extends TXFConfig {
-    @Entry(name = "Enable Tooltips")
-    public static boolean enableTooltips = true;
     @Entry(name = "Iron Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY, itemDisplay = "ironbookshelves:iron_bookshelf")
     public static double ironEnchantPower = 2.0;
     @Entry(name = "Golden Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY, itemDisplay = "ironbookshelves:golden_bookshelf")
