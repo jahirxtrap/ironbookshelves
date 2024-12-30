@@ -4,12 +4,13 @@
   "package": "com.jahirtrap.ironbookshelves.init.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AmethystImbuementCompatMixin",
+    "EasyMagicCompatMixin",
+    "EnchantingInfuserCompatMixin",
     "EnchantmentMenuMixin",
     "EnchantmentTableBlockMixin",
     "JadeCompatMixin",
-    "EasyMagicCompatMixin",
-    "EnchantingInfuserCompatMixin",
-    "AmethystImbuementCompatMixin"
+    "TooltipsCompatMixin"
   ],
   "injectors": {
     "defaultRequire": 1
