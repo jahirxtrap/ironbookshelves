@@ -28,6 +28,7 @@ Bookshelves with more enchantment power
 - <a href="https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-forge" target="_blank">Enderite mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/jade" target="_blank">Jade mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/tooltips-txf" target="_blank">Tooltips TXF mod</a>
 
 <strong>Fabric/Quilt dependencies:</strong>
 
