@@ -1,1 +1,1 @@
-- Removed tooltips in favor of [Tooltips TXF mod](https://www.curseforge.com/minecraft/mc-mods/tooltips-txf)
+- Fixed recipe condition key
