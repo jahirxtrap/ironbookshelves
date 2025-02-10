@@ -34,6 +34,7 @@ public class ModContent {
     public static final Block ENDERITE_BOOKSHELF = registerBlock("enderite_bookshelf", new BaseBookshelfBlock(ModConfig.enderiteEnchantPower, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).sound(SoundType.NETHERITE_BLOCK).strength(66f, 1200f).requiresCorrectToolForDrops()), new Item.Properties().fireResistant());
     public static final Block STEEL_BOOKSHELF = registerBlock("steel_bookshelf", new BaseBookshelfBlock(ModConfig.steelEnchantPower, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops()), new Item.Properties());
     public static final Block BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", new BaseBookshelfBlock(ModConfig.bronzeEnchantPower, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops()), new Item.Properties());
+    public static final Block ZURITE_BOOKSHELF = registerBlock("zurite_bookshelf", new BaseBookshelfBlock(ModConfig.zuriteEnchantPower, BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).mapColor(MapColor.COLOR_GRAY)), new Item.Properties().fireResistant());
 
     private static Block registerBlock(String name, Block block, Item.Properties itemProp) {
         registerItem(name, new BlockItem(block, itemProp));
