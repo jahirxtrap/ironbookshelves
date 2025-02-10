@@ -27,4 +27,6 @@ public class ModConfig extends TXFConfig {
     public static double steelEnchantPower = 3.0;
     @Entry(name = "Bronze Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY, itemDisplay = "ironbookshelves:bronze_bookshelf")
     public static double bronzeEnchantPower = 4.0;
+    @Entry(name = "Zurite Enchant Power", min = 0.0, max = Double.POSITIVE_INFINITY, itemDisplay = "ironbookshelves:zurite_bookshelf")
+    public static double zuriteEnchantPower = 8.0;
 }
