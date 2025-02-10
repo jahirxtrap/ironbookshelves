@@ -1,1 +1,1 @@
-- Fixed recipe condition key
+- Kuro Materials mod compat
