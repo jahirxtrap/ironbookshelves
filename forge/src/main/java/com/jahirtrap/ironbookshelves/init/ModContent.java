@@ -37,6 +37,7 @@ public class ModContent {
     public static final RegistryObject<Block> ENDERITE_BOOKSHELF = registerBlock("enderite_bookshelf", (p) -> new BaseBookshelfBlock(ModConfig.enderiteEnchantPower, p), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).sound(SoundType.NETHERITE_BLOCK).strength(66f, 1200f).requiresCorrectToolForDrops(), new Item.Properties().fireResistant());
     public static final RegistryObject<Block> STEEL_BOOKSHELF = registerBlock("steel_bookshelf", (p) -> new BaseBookshelfBlock(ModConfig.steelEnchantPower, p), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops(), new Item.Properties());
     public static final RegistryObject<Block> BRONZE_BOOKSHELF = registerBlock("bronze_bookshelf", (p) -> new BaseBookshelfBlock(ModConfig.bronzeEnchantPower, p), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops(), new Item.Properties());
+    public static final RegistryObject<Block> ZURITE_BOOKSHELF = registerBlock("zurite_bookshelf", (p) -> new BaseBookshelfBlock(ModConfig.zuriteEnchantPower, p), BlockBehaviour.Properties.ofLegacyCopy(Blocks.NETHERITE_BLOCK).mapColor(MapColor.COLOR_GRAY), new Item.Properties().fireResistant());
 
     private static RegistryObject<Block> registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp, Item.Properties itemProp) {
         var blockReg = registerBlock(name, function, blockProp);
