@@ -17,6 +17,7 @@ Bookshelves with more enchantment power
 - Enderite Bookshelf (Enchantment power => 12)
 - Steel Bookshelf (Enchantment power => 3)
 - Bronze Bookshelf (Enchantment power => 4)
+- Zurite Bookshelf (Enchantment power => 8)
 - Configurable values
 
 <strong>Compatible with:</strong>
@@ -27,6 +28,7 @@ Bookshelves with more enchantment power
 - <a href="https://www.curseforge.com/minecraft/mc-mods/enchanting-infuser-forge" target="_blank">Enchanting Infuser mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-forge" target="_blank">Enderite mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/kuro-materials" target="_blank">Kuro Materials mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/jade" target="_blank">Jade mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/tooltips-txf" target="_blank">Tooltips TXF mod</a>
 
