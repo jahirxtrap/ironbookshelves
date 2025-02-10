@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "kuromaterials:zurite_ingot"
+    },
+    "B": {
+      "item": "ironbookshelves:iron_bookshelf"
+    }
+  },
+  "result": {
+    "id": "ironbookshelves:zurite_bookshelf",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kuromaterials"
+    }
+  ]
+}
