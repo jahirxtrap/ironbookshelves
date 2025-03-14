@@ -1,1 +1,1 @@
-- Kuro Materials mod compat
+- Updated config lib
