@@ -27,7 +27,7 @@ dependencies {
     modImplementation "maven.modrinth:easy-magic:v6.0.0-1.19.4-Fabric"
     modImplementation "maven.modrinth:enchanting-infuser:v6.0.0-1.19.4-Fabric"
     modImplementation "maven.modrinth:jade:10.4.0"
-    modImplementation "maven.modrinth:tooltips-txf:1.19.4-1.0.0-fabric"
+    modImplementation "maven.modrinth:tooltips-txf:1.19.4-1.0.2-fabric"
     modImplementation "maven.modrinth:amethyst-imbuement:1.19.4-06"
 }
 
