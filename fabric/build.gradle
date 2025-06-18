@@ -24,7 +24,7 @@ dependencies {
 
     modImplementation fileTree(dir: 'libs', include: ['*.jar'])
     modImplementation "maven.modrinth:puzzles-lib:v21.1.22-1.21.1-Fabric"
-    modImplementation "maven.modrinth:jade:18.0.1+fabric"
+    modImplementation "maven.modrinth:jade:19.0.1+fabric"
     modImplementation "maven.modrinth:tooltips-txf:1.21.5-1.0.2-fabric"
     modImplementation "maven.modrinth:amethyst-imbuement:1.20.1-19.4"
 }
@@ -87,7 +87,7 @@ publishMods {
     type = BETA
     modLoaders.addAll("fabric", "quilt")
     changelog = rootProject.file("CHANGELOG.md").text
-    def gameVersions = ["1.21.5"]
+    def gameVersions = ["1.21.6"]
 
     curseforge {
         accessToken = System.getenv("CURSEFORGE_TOKEN")
