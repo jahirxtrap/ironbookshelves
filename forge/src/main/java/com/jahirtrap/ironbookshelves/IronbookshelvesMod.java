@@ -8,7 +8,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
@@ -19,11 +19,11 @@ public class IronbookshelvesMod {
     public static final String MODID = "ironbookshelves";
 
     public IronbookshelvesMod(FMLJavaModLoadingContext context) {
-        IEventBus bus = context.getModEventBus();
+        BusGroup bus = context.getModBusGroup();
 
         TXFConfig.init(MODID, ModConfig.class);
         ModContent.init(bus);
-        bus.addListener(this::buildContents);
+        BuildCreativeModeTabContentsEvent.getBus(bus).addListener(this::buildContents);
     }
 
     public void buildContents(BuildCreativeModeTabContentsEvent event) {
