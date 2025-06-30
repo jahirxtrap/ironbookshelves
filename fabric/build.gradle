@@ -23,9 +23,9 @@ dependencies {
     compileOnly project(":common")
 
     modImplementation fileTree(dir: 'libs', include: ['*.jar'])
-    modImplementation "maven.modrinth:puzzles-lib:v21.1.22-1.21.1-Fabric"
-    modImplementation "maven.modrinth:jade:18.0.1+fabric"
-    modImplementation "maven.modrinth:tooltips-txf:1.21.5-1.0.2-fabric"
+    modImplementation "maven.modrinth:puzzles-lib:v21.5.12-1.21.5-Fabric"
+    modImplementation "maven.modrinth:jade:18.2.0+fabric"
+    modImplementation "maven.modrinth:tooltips-txf:1.21.5-1.0.3-fabric"
     modImplementation "maven.modrinth:amethyst-imbuement:1.20.1-19.4"
 }
 
