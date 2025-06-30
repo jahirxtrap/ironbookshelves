@@ -24,7 +24,7 @@ dependencies {
 
     modImplementation fileTree(dir: 'libs', include: ['*.jar'])
     modImplementation "maven.modrinth:jade:5.100.0"
-    modImplementation "maven.modrinth:tooltips-txf:1.18.2-1.0.2-fabric"
+    modImplementation "maven.modrinth:tooltips-txf:1.18.2-1.0.4-fabric"
     modImplementation "maven.modrinth:amethyst-imbuement:1.18.2-45"
 }
 
