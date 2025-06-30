@@ -49,7 +49,7 @@ dependencies {
     compileOnly project(":common")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "maven.modrinth:jade:17.1.2+neoforge"
+    implementation "maven.modrinth:jade:17.3.0+neoforge"
     jarJar "com.jahirtrap:configlibtxf:${configlibtxf_version}-neoforge"
 }
 
