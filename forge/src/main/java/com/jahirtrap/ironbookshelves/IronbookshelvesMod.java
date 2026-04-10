@@ -9,11 +9,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
 
 @Mod(IronbookshelvesMod.MODID)
+@Mod.EventBusSubscriber(modid = IronbookshelvesMod.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class IronbookshelvesMod {
 
     public static final String MODID = "ironbookshelves";
@@ -23,10 +25,10 @@ public class IronbookshelvesMod {
 
         TXFConfig.init(MODID, ModConfig.class);
         ModContent.init(bus);
-        BuildCreativeModeTabContentsEvent.getBus(bus).addListener(this::buildContents);
     }
 
-    public void buildContents(BuildCreativeModeTabContentsEvent event) {
+    @SubscribeEvent
+    public static void buildContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             var prev = Items.BOOKSHELF;
             for (RegistryObject<Item> item : ModContent.ITEMS.getEntries()) {

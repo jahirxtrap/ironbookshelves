@@ -1,7 +1,6 @@
 package com.jahirtrap.ironbookshelves.init.mixin;
 
 import com.jahirtrap.ironbookshelves.util.EnchantmentBonusBlock;
-import me.fzzyhmstrs.amethyst_imbuement.screen.ImbuingTableScreenHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.EnchantingTableBlock;
@@ -11,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(ImbuingTableScreenHandler.class)
+@Mixin(targets = "me.fzzyhmstrs.amethyst_imbuement.screen.ImbuingTableScreenHandler")
 public abstract class AmethystImbuementCompatMixin {
 
     @Inject(method = "checkBookshelves", at = @At("HEAD"), cancellable = true)

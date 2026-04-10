@@ -8,9 +8,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import snownee.jade.util.ClientProxy;
 
-@Mixin(ClientProxy.class)
+@Mixin(targets = "snownee.jade.util.ClientProxy")
 public abstract class JadeCompatMixin {
 
     @Inject(method = "getEnchantPowerBonus", at = @At("HEAD"), cancellable = true)

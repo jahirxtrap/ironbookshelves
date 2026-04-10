@@ -4,7 +4,7 @@ import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.ironbookshelves.init.ModConfig;
 import com.jahirtrap.ironbookshelves.init.ModContent;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -21,10 +21,10 @@ public class IronbookshelvesMod implements ModInitializer {
     }
 
     public void buildContents() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
             var prev = Items.BOOKSHELF;
             for (Item item : ModContent.ITEMS) {
-                event.addAfter(prev, item);
+                event.insertAfter(prev, item);
                 prev = item;
             }
         });

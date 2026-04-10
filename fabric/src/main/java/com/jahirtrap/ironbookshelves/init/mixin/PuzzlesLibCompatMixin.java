@@ -1,7 +1,6 @@
 package com.jahirtrap.ironbookshelves.init.mixin;
 
 import com.jahirtrap.ironbookshelves.util.EnchantmentBonusBlock;
-import fuzs.puzzleslib.fabric.impl.core.FabricCommonProxy;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(FabricCommonProxy.class)
+@Mixin(targets = "fuzs.puzzleslib.fabric.impl.core.FabricCommonProxy")
 public abstract class PuzzlesLibCompatMixin {
 
     @Inject(method = "getEnchantPowerBonus", at = @At("HEAD"), cancellable = true)
