@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(EnchantmentMenu.class)
 public abstract class EnchantmentMenuMixin {
 
-    @ModifyVariable(method = "method_17411", at = @At(value = "STORE", ordinal = 0), ordinal = 0, remap = false)
+    @ModifyVariable(method = "lambda$slotsChanged$0", at = @At(value = "STORE", ordinal = 0), ordinal = 0, remap = false)
     private int modifyEnchantValue(int i, ItemStack stack, Level level, BlockPos pos) {
         float j = 0;
         for (BlockPos blockPos : EnchantingTableBlock.BOOKSHELF_OFFSETS) {
