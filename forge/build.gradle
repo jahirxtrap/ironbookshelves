@@ -9,6 +9,16 @@ version = "${version}-forge"
 jarJar.enable()
 base.archivesName = mod_id
 
+dependencies {
+    minecraft "net.minecraftforge:forge:${forge_version}"
+    compileOnly project(":common")
+
+    implementation(jarJar("io.github.jahirxtrap:configlibtxf:${configlibtxf_version}-forge") {
+        transitive = false
+        jarJar.ranged(it, "[${configlibtxf_version}-forge,)")
+    })
+}
+
 minecraft {
     mappings channel: 'official', version: minecraft_version
 
@@ -61,14 +71,6 @@ minecraft {
 }
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
-
-dependencies {
-    minecraft "net.minecraftforge:forge:${forge_version}"
-    compileOnly project(":common")
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    jarJar "com.jahirtrap:configlibtxf:[${configlibtxf_version}-forge,)"
-}
 
 def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta']
 def replaceProperties = [

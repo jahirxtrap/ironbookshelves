@@ -1,1 +1,1 @@
-- Added Russian translations ([Pull request #12](https://github.com/jahirxtrap/ironbookshelves/pull/12))
+- Updated config lib
